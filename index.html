@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--nav and title here-->
     <title>Chrome Hearts</title>
     <meta charset = "utf-8">
     <style>
@@ -13,6 +14,8 @@
         gap:15px;
         margin: 0; /*remove default h1 margin*/
         font-size:24px;
+        position:sticky;
+        top:0;
         }
         .logo{
           width: auto;
@@ -27,6 +30,11 @@
         color:white;
         padding:20px;
         text-align:centre;
+        justify-content: space-between;
+        position: relative; /*add this*/
+        z-index:10; /* add this*/
+        position:sticky;
+        top:0;
       }
       #sitenav li:hover{
         background: transparent;
@@ -104,7 +112,6 @@
         }
 
     </style>
-  </head>
   <body> 
     <div id = "divmaincontainer">
       <header id = "siteheader">
@@ -125,6 +132,7 @@
           <br>
             <main>
                 <section>
+                  <!--videos + overlay here-->
                     <div class = "hero-videos">
                         <video src = "vid5.mp4" autoplay muted loop playsinline></video>
                         <video src = "vid6.mp4" autoplay muted loop playsinline></video>
