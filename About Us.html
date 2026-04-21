@@ -4,15 +4,55 @@
         body{
             margin:0;
             font-family: Arial, sans-serif;
-            text-align: justify;
-        }
-         h1,h2{
-            text-transform: uppercase;
-            font-family: "Cloister Black",serif;
             text-align: center;
-            text
-            
          }
+         /* Full-screen video background*/
+        .hero-video{
+            position:relative;
+            width:100%;
+            height:100hv; /*full viewport height*/
+            overflow: hidden;
+        }
+        .bg-video{
+            position:absolute;
+            top:50%;
+            left:50%;
+            min-width:100%;
+            min-height:100%;
+            width:auto;
+            height:auto;
+            transform:translate(-50%, -50%);
+            object-fit:cover;
+            z-index:-1;
+        /* Text overlay centered on top*/
+        .info-overlay{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5); /*darkens videos so text is readable*/
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .info-overlay h1,h2{
+            font-size: 3rem;
+            margin : 0 0 15px 0;
+            text-transform: uppercase;
+            font-family: "Cloister Black", serif;
+        }
+        .info-overlay p{
+            max-width: 700px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+        }
+        
     </style>
 <head>
     <meta charset="UTF-8">
@@ -20,6 +60,10 @@
     <title>About Us</title>
 </head>
 <body>
+    <main id = "maincontent">
+        <section class = "hero-videos">
+                <video class = "bg-video" src = "vid7.mp4" autoplay muted loop playsinline></video>
+            <div class = "info-overlay">
     <h1>The Creation Of Chrome Hearts</h1>
     <p>In 1988, Richard Stark and John Bowman founded Chrome Hearts in Los Angeles. 
         The brand started with leather and silver goods, reflecting biker-inspired street fashion. 
@@ -39,5 +83,11 @@
         </p>
         <br>
     <a href = "index.html">Back to Homepage</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyrights@2026</p>
+    </footer>
 </body>
 </html>
