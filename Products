@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: justify
+    }
 
+</style>
+<body>
+    <a href="index.html" Back to Homepage></a>
+    <h1>Products</h1>
+    <p>Chrome Hearts offers a wide range of products, including clothing, accessories, and home decor. The brand is known for its unique blend of gothic and rock 'n' roll aesthetics, which is reflected in its product designs. 
+        Each piece is meticulously crafted with attention to detail, ensuring high quality and craftsmanship. 
+        From leather jackets and silver jewelry to eyewear and furniture, Chrome Hearts has something for everyone who appreciates edgy and luxurious fashion.  
+</body>
+</html>
