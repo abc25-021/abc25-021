@@ -69,7 +69,7 @@
         text-decoration: underline;
       }
       /* Video hero section*/
-      .hero-videos{
+      .hero-video{
         position:relative;
         width:100%;
         height:calc(100hv-70px);
@@ -84,7 +84,7 @@
         height: 100%;
         gap: 2px; /*small gap between videos*/
       }
-        .hero-videos video{
+        .hero-video video{
             width:100%;
             height:100%;
             object-fit: cover; /*crops videos to fill space, no stretching*/
@@ -111,13 +111,41 @@
             text-transform: uppercase;
             font-family: "Cloister Black", serif;
         }
-        .info-overlay p{
-            max-width: 700px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-family: Arial, sans-serif;
-        }
-
+      .showcase{
+        display:flex;
+        align-items:stretch;
+        min-height: calc(100vh-70px);
+        background:#111;
+      }
+      .side-images{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        gap:0;
+      }
+      .side-images img{
+        width:100%;
+        height:50%;
+        object-fit:cover;
+        display:block;
+      }
+      .info-center{
+        flex:1.2;
+        background:rgba(0,0,0,0.8);
+        color:white;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:40px;
+      }
+      .info-center p{
+        max-width:500px;
+        font-size:1.1rem;
+        line-height:1.7;
+        font-family:Arial,sans-serif;
+      }
     </style>
   <body> 
     <div id = "divmaincontainer">
@@ -140,44 +168,45 @@
           <br>
             <main>
                 <section>
-                  <!--videos + overlay here-->
-                    <div class = "hero-videos">
+                  <!--video + overlay here-->
+                    <div class = "hero-video">
                         <video src = "vid5.mp4" autoplay muted loop playsinline></video>
-                        <video src = "vid6.mp4" autoplay muted loop playsinline></video>
                     </div>
                     <div class = "info-overlay">
-                        <h2> Information</h2>
-              <p>The brand started in Los Angeles proudly. Richard Stark built it with a bold vision.
-                It began with leather and silver goods.
-                Stark wanted more than basic fashion. His ideas were raw and edgy. 
-                The brand reflected biker-inspired street fashion.</p> <br>
+                        <h2> Richard Stark</h2>
                 </div>
                 </section>
               </main>
-              <section>
-                <div class = "gallery">
-                  <img src = "img1.jpg">
-                  <img src = "img2.jpg">
-                  <img src = "img3.jpg">
-                  <img src = "img4.jpg">
+      <main>
+              <section class = "showcase">
+                <div class = "side-images left">
+                  <img src = "image1.jpg" alt ="">
+                  <img src = "image2.0.jpeg alt ="">
                 </div>
-            </section>
-            <article>
-            <p> </p>
-            </article>
+                  <div class = "info-center">
+            <p> The brand started in Los Angeles proudly. Richard Stark built it wuth a bold vision.
+            It began with leather and silver good.Stark wanted more than basic fashion.
+            His ideas were raw and edgy. The brand reflected biker-inspired fashion</p>
+                  </div>
+                <div class = "side-images right">
+                  <img src ="image3.jpg" alt="">
+                  <img src = "image4.jpg" alt="">
+                </div>
+              </section>
+          
             <footer>
               <p>Copyrights@2026</p>
               <hr>
               <section id = "social media">
                 <a href = "facebook.com"><img src = "FB.jpg"></a>
-                 <a href = "instagram.com"><img src = "IG.jpg"></a>
+                 <a href = "chromehearts.com"><img src = "IG.jpg"></a>
                  <a href = "twitter.com"><img src = "X.jpg"></a>
               </section>
             </footer>
     </div>  
     <script>
         windows.addEventListener('load',()=>{
-            const videos = document.querySelectorAll('.hero-videos video');
+            const videos = document.querySelectorAll('.hero-video video');
             videos.forEach(video => {
                 video.play();
             });
