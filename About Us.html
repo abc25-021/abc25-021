@@ -69,17 +69,21 @@
       }
       #ulnav a:hover{
         text-decoration: underline;
-    <style>
+      }
         body{
             margin:0;
             font-family: Arial, sans-serif;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
          }
          /* Full-screen video background*/
         .hero-video{
             position:relative;
             width:100%;
-            height:100hv; /*full viewport height*/
+            height:calc(100vh - 70px); /*full viewport height*/
             overflow: hidden;
         }
         .bg-video{
@@ -93,43 +97,69 @@
             transform:translate(-50%, -50%);
             object-fit:cover;
             z-index:-1;
-        /* Text overlay centered on top*/
+        }
+        /* overlay scrolls, not the video*/
         .info-overlay{
             position: absolute;
             top:0;
             left:0;
             width:100%;
             height: 100%;
-            background: rgba(0,0,0,0.5); /*darkens videos so text is readable*/
+            background: rgba(0,0,0,0.7); /*darkens videos so text is readable*/
             color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
+           overflow-y: auto;
+           z-index: 1;
         }
-        .info-overlay h1,h2{
-            font-size: 3rem;
-            margin : 0 0 15px 0;
-            text-transform: uppercase;
-            font-family: "Cloister Black", serif;
-        }
-        .info-overlay p{
-            max-width: 700px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-family: Arial, sans-serif;
-        }
+            .overlay-content{
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 60px 30px;
+                text-align: center;
+            }
+            .overlay-content h2{
+                font-size: 2.5rem;
+                margin : 40px 0 20px 0;
+                text-transform: uppercase;
+                font-family: "Cloister Black", serif;
+                
+            }
+            .overlay-content h2:first-child{
+                margin-top:0;
+            }
+             .overlay-content p{
+                font-size: 1.1rem;
+                line-height: 1.7;
+                margin-bottom: 25px;
+                font-family: Arial, sans-serif;
+            }
+             .overlay-content h3{
+                font-size: 2rem;
+                margin: 30px 0 15px 0;
+                text-transform: uppercase;
+                font-family: "Cloister Black", serif;
+            }
+             .overlay-content h3:first-child{
+                margin-top:0;
+            }
+            footer{
+                background:#000;
+                color:#999;
+                text-align: center;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 0.9rem;
+            }
+            main{
+                flex:1;
+            }
+
         
     </style>
 </head>
 <body>
     <div id = "divmaincontainer">
       <header id = "siteheader">
-        <h1 id = "sitetitle"> Chrome Hearts 
-        <a><img src = "logo.png"></a>
-        </h1>
+        <h1 id = "sitetitle"><img src = "logo.png" alt = "Chrome Hearts" class = "logo">Chrome Hearts</h1>
       
       <nav id = "sitenav">
         <ul id = "ulnav">
@@ -139,34 +169,53 @@
            <li><a href = "Services.html">Services</a></li>
         </ul>
        </nav>
+       </header>
+       </div>
+       
     <main id = "maincontent">
         <section class = "hero-videos">
                 <video class = "bg-video" src = "vid10.mp4" autoplay muted loop playsinline></video>
-            <div class = "info-overlay">
-    <h1>The Creation Of Chrome Hearts</h1>
+
+                <div class = "info-overlay">
+                    <div class="overlay-content">
+                    <h2>Discover the Story Behind Chrome Hearts</h2>
+                    <p>From its rebellious beginnings in Los Angeles to becoming a global luxury brand, explore the history and legacy of Chrome Hearts.</p>
+                    <br>
+    <h3>The Creation Of Chrome Hearts</h3>
     <p>In 1988, Richard Stark and John Bowman founded Chrome Hearts in Los Angeles. 
         The brand started with leather and silver goods, reflecting biker-inspired street fashion. 
         Stark's vision was to create more than basic fashion, resulting in raw and edgy designs that resonated with a rebellious spirit.
     </p>
     <br>
-    <h2>Brand Evolution</h2>
+    <h3>Brand Evolution</h3>
     <p>Over the years, Chrome Hearts has evolved into a global luxury brand, expanding its product range to include clothing, accessories, and home decor. 
         The brand's unique blend of gothic and rock 'n' roll aesthetics has garnered a dedicated following worldwide. 
         Despite its growth, Chrome Hearts has maintained its commitment to craftsmanship and quality, ensuring that each piece is meticulously crafted with attention to detail.
         </p>
         <br>
-    <h2>Legacy and Influence</h2>
+    <h3>Legacy and Influence</h3>
     <p>Chrome Hearts has left a lasting impact on the fashion industry, influencing trends and inspiring other designers. 
         The brand's distinctive style has been embraced by celebrities and fashion enthusiasts alike, solidifying its status as a cultural icon. 
         With its roots in Los Angeles and a global presence, Chrome Hearts continues to be a symbol of individuality and rebellion in the world of fashion.
         </p>
         <br>
-    <a href = "index.html">Back to Homepage</a>
+    <h3>Conclusion</h3>
+    <p>From its humble beginnings in Los Angeles to becoming a global luxury brand, Chrome Hearts has carved out a unique niche in the fashion world. 
+        The brand's commitment to quality, craftsmanship, and edgy design has made it a beloved name among fashion enthusiasts. 
+        As Chrome Hearts continues to evolve, it remains a testament to the vision and creativity of its founders, Richard Stark and John Bowman.
+        </p>
+            </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>Copyrights@2026</p>
+        <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
+            <section id = "social media">
+                    <a href = "facebook.com"><img src = "FB.jpg"></a>
+                    <a href = "chromehearts.com"><img src = "IG.jpg"></a>
+                    <a href = "twitter.com"><img src = "X.jpg"></a>
+            </section>
     </footer>
+    
 </body>
 </html>
