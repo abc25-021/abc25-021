@@ -80,6 +80,20 @@
       .signin-btn:hover{
         background:#ddd;
       }
+      footer{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:20px 30px;
+        position:sticky;
+        bottom:0;
+        display:flex;
+        justify-content: center;    
+      }
+        main{
+            flex:1;
+        }
+        
       </style>
   </head>
   <head>
@@ -89,24 +103,60 @@
      <body> 
     <div id = "divmaincontainer">
       <header id = "siteheader">
-        <h1 id = "sitetitle"> Chrome Hearts 
-        <img src = "logo.png" alt = "Chrome Hearts" class = "logo">
-          Chrome Hearts
-        </h1>
-        <a href = "index.html" class= "signin-btn">Back to Home</a>
+        <h1 id = "sitetitle"><img src = "logo.png" alt = "Chrome Hearts" class = "logo">Chrome Hearts</h1>
+        <nav id = "sitenav">
+        <ul id = "ulnav">
+           <li><a href = "index.html">Home</a></li>
+           <li><a href = "About Us.html">About Us</a></li>
+           <li><a href = "Products.html">Products</a></li>
+           <li><a href = "Services.html">Services</a></li>
+           <li><a href = "signin.html">Sign In</a></li>
+        </ul>
+      </nav>
       </header>
       <main class = "auth-page">
         <div>
           <h2>Sign In</h2>
           <form id = "signin-form">
             <label>Email</label>
-            <input type = "password" id = "email" required>
+            <input type = "email" id = "email" required>
+            <label>Password</label>
+            <input type = "password" id = "password" required>
             <button type = "submit">Sign In</button>
           </form>
           <p id = "login-message"></p>
         </div>
       </main>
     </div>
-     </body>
+     
+     <footer>
+      <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
+       <section id = "social media">
+                <a href = "facebook.com"><img src = "FB.jpg"></a>
+                 <a href = "chromehearts.com"><img src = "IG.jpg"></a>
+                 <a href = "twitter.com"><img src = "X.jpg"></a>
+    </section>
+    </footer>
+    </body>
+     <script>
+         const form = document.getElementById('signin-form');
+         const messageEl = document.getElementById('login-message');
+         
+         form.addEventListener('submit', (e) => {
+             e.preventDefault();
+             const email = document.getElementById('email').value;
+             const password = document.getElementById('password').value;
+             
+             // Simulate login validation
+             if(email === 'user@example.com' && password === 'password') {
+                 messageEl.textContent = 'Login successful!';
+                 messageEl.style.color = 'green';
+             } else {
+                 messageEl.textContent = 'Invalid email or password.';
+                 messageEl.style.color = 'red';
+             }
+         });
+     </script>
+
 </html>
-      
+  
