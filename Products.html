@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+</head>
 <style>
-    h1{
-        text-align: center;
-    }
-    p{
-        text-align: justify
-    }
-      <style>
-      *{
+    *{
         margin:0;
         padding:0;
         box-sizing:border-box;
@@ -75,19 +69,52 @@
       #ulnav a:hover{
         text-decoration: underline;
       }
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: justify
+    }
+        .showcase{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .side-images{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .side-images.left{
+            align-items: flex-start;
+        }
+        .side-images.right{
+            align-items: flex-end;
+        }
+        .images-center{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .showcase img{
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        footer{
+            background:#111;
+            color:white;
             text-align: center;
+            padding: 20px 0;
+        }
 
 </style>
-</head>
 <body>
     <div id = "divmaincontainer">
       <header id = "siteheader">
-        <h1 id = "sitetitle"> Chrome Hearts 
-        <a><img src = "logo.png"></a>
-        </h1>
+        <h1 id = "sitetitle"><img src = "logo.png" alt = "Chrome Hearts" class = "logo">Chrome Hearts</h1>
       
       <nav id = "sitenav">
         <ul id = "ulnav">
@@ -95,13 +122,118 @@
            <li><a href = "About Us.html">About Us</a></li>
            <li><a href = "Products.html">Products</a></li>
            <li><a href = "Services.html">Services</a></li>
+           <li><a href = "signin.html">Sign In</a></li>
         </ul>
        </nav>
-    <a href="index.html" Back to Homepage></a>
+
+    </header>
+          <br>
+            <main>
+                <section>
     <h1>Products</h1>
-    <p>Chrome Hearts offers a wide range of products, including clothing, accessories, and home decor. The brand is known for its unique blend of gothic and rock 'n' roll aesthetics, which is reflected in its product designs. 
+    <p>Chrome Hearts offers a wide range of products, including clothing, accessories, and home decor. 
+        The brand is known for its unique blend of gothic and rock 'n' roll aesthetics, which is reflected in its product designs. 
         Each piece is meticulously crafted with attention to detail, ensuring high quality and craftsmanship. 
-        From leather jackets and silver jewelry to eyewear and furniture, Chrome Hearts has something for everyone who appreciates edgy and luxurious fashion.  
-   <a href = "index.html" Back to Homepage><a>
+        From leather jackets and silver jewelry to eyewear and furniture, Chrome Hearts has something for everyone who appreciates edgy and luxurious fashion. <br><br>
+
+        Explore our latest collection of products, featuring bold designs and exceptional craftsmanship.
+        Whether you're looking for statement pieces or everyday essentials, Chrome Hearts has you covered with a wide range of options to suit your style.</p>
+        </p>
+                </section>
+            </main> 
+
+            <main id = "maincontent">
+                <section class = "showcase">
+                    <div class = "side-images left">
+                        <img src = "product1.jpg" alt = "Product 1">
+                        <img src = "product4.jpg" alt = "Product 4">
+                        <img src = "product7.jpg" alt = "Product 7">
+                        <img src = "product10.jpg" alt = "Product 10">
+                        <img src = "product13.jpg" alt = "Product 13">
+                    </div>
+                    
+                    <div class = "images-center">
+                        <img src = "product2.jpg" alt = "Product 2">
+                        <img src = "product5.jpg" alt = "Product 5">
+                        <img src = "product8.jpg" alt = "Product 8">
+                        <img src = "product11.jpg" alt = "Product 11">
+                        <img src = "product14.jpg" alt = "Product 14">
+                    </div>
+                  
+                    <div class = "side-images right">
+                        <img src = "product3.jpg" alt = "Product 3">
+                        <img src = "product6.jpg" alt = "Product 6">
+                        <img src = "product9.jpg" alt = "Product 9">
+                        <img src = "product12.jpg" alt = "Product 12">
+                        <img src = "product15.jpg" alt = "Product 15">
+                    </div>
+                </section>
+            </main>
+            <nextpage> 
+            <main id = "maincontent">
+                <section class = "showcase">
+                    <div class = "side-images left">
+                        <img src = "product16.jpg" alt = "Product 16">
+                        <img src = "product19.jpg" alt = "Product 19">
+                        <img src = "product22.jpg" alt = "Product 22">
+                        <img src = "product25.jpg" alt = "Product 25">
+                        <img src = "product28.jpg" alt = "Product 28">
+                    </div>
+                    
+                    <div class = "images-center">
+                        <img src = "product17.jpg" alt = "Product 17">
+                        <img src = "product20.jpg" alt = "Product 20">
+                        <img src = "product23.jpg" alt = "Product 23">
+                        <img src = "product26.jpg" alt = "Product 26">
+                        <img src = "product29.jpg" alt = "Product 29">
+                    </div>
+                  
+                    <div class = "side-images right">
+                        <img src = "product18.jpg" alt = "Product 18">
+                        <img src = "product21.jpg" alt = "Product 21">
+                        <img src = "product24.jpg" alt = "Product 24">
+                        <img src = "product27.jpg" alt = "Product 27">
+                        <img src = "product30.jpg" alt = "Product 30">
+                    </div>
+
+                </section>
+            </nextpage>
+            <nextpage> 
+            <main id = "maincontent">
+                <section class = "showcase">
+                    <div class = "side-images left">
+                        <img src = "product31.jpg" alt = "Product 31">
+                        <img src = "product34.jpg" alt = "Product 34">
+                        <img src = "product37.jpg" alt = "Product 37">
+                        <img src = "product40.jpg" alt = "Product 40">
+                        <img src = "product43.jpg" alt = "Product 43">
+                    </div>
+                    
+                    <div class = "images-center">
+                        <img src = "product32.jpg" alt = "Product 32">
+                        <img src = "product35.jpg" alt = "Product 35">
+                        <img src = "product38.jpg" alt = "Product 38">
+                        <img src = "product41.jpg" alt = "Product 41">
+                        <img src = "product44.jpg" alt = "Product 44">
+                    </div>
+                  
+                    <div class = "side-images right">
+                        <img src = "product33.jpg" alt = "Product 33">
+                        <img src = "product36.jpg" alt = "Product 36">
+                        <img src = "product39.jpg" alt = "Product 39">
+                        <img src = "product42.jpg" alt = "Product 42">
+                        <img src = "product45.jpg" alt = "Product 45">
+                    </div>
+
+                </section>
+            </nextpage>
+            <footer>
+                <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
+                 <section id = "social media">
+                <a href = "facebook.com"><img src = "FB.jpg"></a>
+                 <a href = "chromehearts.com"><img src = "IG.jpg"></a>
+                 <a href = "twitter.com"><img src = "X.jpg"></a>
+    </section>  
+            </footer>
 </body>
 </html>
