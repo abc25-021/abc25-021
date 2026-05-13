@@ -4,113 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <link ref = "stylesheet" href = ".css">
 </head>
-<style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-      }
-      #sitetitle{
-        text-transform: uppercase;
-        font-family: "Cloister Black",serif;
-        display: flex;
-         text-align: center;
-        justify-content: center;
-        gap:15px;
-        margin: 0; /*remove default h1 margin*/
-        font-size:24px;
-        position:sticky;
-        top:0;
-        }
-        .logo{
-          width: auto;
-          height: 40px;
-          display:block;
-        }
-      body{
-        margin:0;
-        font-family: Arial, sans-serif;
-      }
-      #siteheader{
-        background:#111;
-        color:white;
-        padding:15px 30px;
-        text-align:centre;
-        justify-content: space-between;
-        position: sticky; /*add this*/
-        z-index:10; /* add this*/
-        position:sticky;
-        top:0;
-        display:flex;
-      }
-      #sitenav li:hover{
-        background: transparent;
-        margin:0;
-        text-align: left;
-      }
-      #sitenav a:hover{
-        background:#777
-      }
-      /*Make the nav list horizontal*/
-      #ulnav{
-        list-style-type: none; /*remove bullets*/
-        margin:0;
-        padding:0;
-        display:flex;
-        gap:25px; /*space between links*/
-      }
-      #ulnav a{
-        color:white;
-        text-decoration: none;
-        padding: 8px 12px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      #ulnav a:hover{
-        text-decoration: underline;
-      }
-    h1{
-        text-align: center;
-    }
-    p{
-        text-align: justify
-    }
-        .showcase{
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
-        .side-images{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .side-images.left{
-            align-items: flex-start;
-        }
-        .side-images.right{
-            align-items: flex-end;
-        }
-        .images-center{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
-        .showcase img{
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-        }
-        footer{
-            background:#111;
-            color:white;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-</style>
 <body>
     <div id = "divmaincontainer">
       <header id = "siteheader">
@@ -208,7 +103,7 @@
                         <img src = "product40.jpg" alt = "Product 40">
                         <img src = "product43.jpg" alt = "Product 43">
                     </div>
-                    
+                    <next page>
                     <div class = "images-center">
                         <img src = "product32.jpg" alt = "Product 32">
                         <img src = "product35.jpg" alt = "Product 35">
@@ -216,7 +111,7 @@
                         <img src = "product41.jpg" alt = "Product 41">
                         <img src = "product44.jpg" alt = "Product 44">
                     </div>
-                  
+                  <next page>
                     <div class = "side-images right">
                         <img src = "product33.jpg" alt = "Product 33">
                         <img src = "product36.jpg" alt = "Product 36">
@@ -228,11 +123,11 @@
                 </section>
             </nextpage>
             <footer>
-                <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-                 <section id = "social media">
-                <a href = "facebook.com"><img src = "FB.jpg"></a>
-                 <a href = "chromehearts.com"><img src = "IG.jpg"></a>
-                 <a href = "twitter.com"><img src = "X.jpg"></a>
+                 <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
+     <section id = "social media">
+                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "imagech.jpg"></a>
+                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
+                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
     </section>  
             </footer>
 </body>
