@@ -1,102 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--nav and title here-->
-    <title>Chrome Hearts</title>
     <meta charset = "utf-8">
-    <style>
-      *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-      }
-      #sitetitle{
-        text-transform: uppercase;
-        font-family: "Cloister Black",serif;
-        display: flex;
-         text-align: center;
-        justify-content: center;
-        gap:15px;
-        margin: 0; /*remove default h1 margin*/
-        font-size:24px;
-        position:sticky;
-        top:0;
-        }
-        .logo{
-          width: auto;
-          height: 40px;
-          display:block;
-        }
-      body{
-        margin:0;
-        font-family: Arial, sans-serif;
-      }
-      #siteheader{
-        background:#111;
-        color:white;
-        padding:15px 30px;
-        text-align:centre;
-        justify-content: space-between;
-        position: sticky; /*add this*/
-        z-index:10; /* add this*/
-        position:sticky;
-        top:0;
-        display:flex;
-      }
-      #sitenav li:hover{
-        background: transparent;
-        margin:0;
-        text-align: left;
-      }
-      #sitenav a:hover{
-        background:#777
-      }
-      /*Make the nav list horizontal*/
-      #ulnav{
-        list-style-type: none; /*remove bullets*/
-        margin:0;
-        padding:0;
-        display:flex;
-        gap:25px; /*space between links*/
-      }
-      #ulnav a{
-        color:white;
-        text-decoration: none;
-        padding: 8px 12px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      #ulnav a:hover{
-        text-decoration: underline;
-      }
-      .signin-btn{
-        background:white;
-        color:#111;
-        padding:8px 16px;
-        border-radius:4px;
-        text-decoration:none;
-        font-weight:bold;
-        font-family:Arial, sans-serif;
-      }
-      .signin-btn:hover{
-        background:#ddd;
-      }
-      footer{
-        background:#111;
-        color:white;
-        text-align:center;
-        padding:20px 30px;
-        position:sticky;
-        bottom:0;
-        display:flex;
-        justify-content: center;    
-      }
-        main{
-            flex:1;
-        }
-        
-      </style>
-  </head>
-  <head>
     <title>Sign In- Chrome hearts</title>
     <link rel = "stylesheet" href = "style.css">
   </head>
@@ -115,48 +20,69 @@
       </nav>
       </header>
       <main class = "auth-page">
-        <div>
+        <div class = "auth-card">
           <h2>Sign In</h2>
           <form id = "signin-form">
-            <label>Email</label>
+            <label for = "email"> Email </label>
             <input type = "email" id = "email" required>
-            <label>Password</label>
-            <input type = "password" id = "password" required>
-            <button type = "submit">Sign In</button>
+
+            <label for ="password"> Password </label>
+            <div class = "password-wrap">
+              <input type = "password" id = "password" required minlenght ="6">
+              <button type = "button" id = "togglePass"> Show </button>
+            </div>
+            <button type = "Submit"> Sign In </button>
           </form>
           <p id = "login-message"></p>
-        </div>
+          <p class = "signup-link"> Don't have an account? <a href = "signup.html"> Sign Up</a></p>
       </main>
     </div>
      
      <footer>
       <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-       <section id = "social media">
-                <a href = "facebook.com"><img src = "FB.jpg"></a>
-                 <a href = "chromehearts.com"><img src = "IG.jpg"></a>
-                 <a href = "twitter.com"><img src = "X.jpg"></a>
+     <section id = "social media">
+                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "imagech.jpg"></a>
+                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
+                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
     </section>
     </footer>
-    </body>
+    <script src = "signin.js"></script>
      <script>
-         const form = document.getElementById('signin-form');
-         const messageEl = document.getElementById('login-message');
-         
-         form.addEventListener('submit', (e) => {
-             e.preventDefault();
-             const email = document.getElementById('email').value;
-             const password = document.getElementById('password').value;
-             
-             // Simulate login validation
-             if(email === 'user@example.com' && password === 'password') {
-                 messageEl.textContent = 'Login successful!';
-                 messageEl.style.color = 'green';
-             } else {
-                 messageEl.textContent = 'Invalid email or password.';
-                 messageEl.style.color = 'red';
-             }
-         });
-     </script>
+        const form = document.getElementById('signin-form');
+        const togglePass = document.getElementById('togglePass');
+        const passwordInput = document.getElementById('password');
+        const message = document.getElementById('login-message');
 
+        //Show/hide password//
+        togglePass.addEventListener('click', () =>{
+          const isPassword = passwordInput.type === 'password';
+          passwordInput.type = isPassword ? 'text' : 'password' ;
+          tooglePass.textContent = isPassword ? 'Hide' : 'Show' ;
+        });
+
+        //Handle form submit//
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = passwordInput.value;
+          
+          // This is where you'd call your backend or Firebase/Auth API
+          console.log('Login attempt:',{email, password, remember});
+
+          // Demo: show message
+          message.style.color = '#4f4';
+          message.textContent = 'Login successful Redirecting...';
+
+          // Reset after 2s
+          setTimeout(() => {
+            message.textContent = '';
+            form.reset();
+          }, 2000);
+        });  
+        
+
+
+     </script>
+</body>
 </html>
   
