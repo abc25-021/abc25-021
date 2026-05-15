@@ -1,4 +1,4 @@
-  /* This applies to all .html pages*/
+/* This applies to all .html pages*/
 *{
         margin:0;
         padding:0;
@@ -249,6 +249,136 @@
         }
         /*additional css for the signin.html page*/
         body{
+          font-family: Arial, sans-serif;
+          background:#0a0a0a;
+          color:white;
+          min-height: 100vh;
+          display:flex;
+          flex-direction:column;
+        }
+        /*Centered form container*/
+        .auth-page{
+          flex: 1;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          padding: 40px 20px;
+        }
+        .auth-card{
+          background: #151515;
+          padding:40px 30px;
+          border-radius: 10px;
+          width: 100%;
+          max-width: 420px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.5)
+        }
+        .auth-card h2{
+          text-align:center;
+          margin-bottom:25px;
+          gap:15px;
+        }
+
+        /*Form*/
+        #signin-form{
+          display:flex;
+          flex-direction:column;
+          gap:15px;
+        }
+        #signin-form label{
+          font-size:0.9rem;
+          color:#ccc;
+        }
+        #signin-form input{
+          width:100%;
+          padding:12px;
+          border:1px solid #333;
+          border-radius:6px;
+          background:#1f1f1f;
+          color:white;
+          font-size:1rem;
+        }
+        #signin-form input:focus{
+          outline:none;
+          border-color:#666;
+        }
+
+        /*Password with toggle*/
+        .password-wrap{
+          position:relative;
+        }
+
+        #togglePass{
+          position:absolute;
+          right:10px;
+          top:50%;
+          transform:translateY(-50%);
+          background:none;
+          border:none;
+          color:#ccc;
+          cursor:pointer;
+          font-size:0.85rem;
+        }
+
+        /*Submit button*/
+        #signin-form button[type="submit"]{
+        background:white;
+        color:black;
+        padding:12px;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+        font-weight:bold;
+        margin-top:10px;
+        transition:0.2s;
+      }
+
+      #signin-form button[type ="submit"]:hover{
+        background:#ddd;
+      }
+
+      /*Message + singup link*/
+      #login-message{
+        text-align:center;
+        margin-top:15px;
+        font-size:0.9rem;
+        color:#f44;
+        min-height:20px;
+      }
+
+      .signup-link{
+        text-align:center;
+        margin-top:20px;
+        font-size:0.9rem;
+        color:#ccc;
+      }
+
+      .signup-link a{
+        color:white;
+        font-weight:bold;
+        text-decoration:none;
+      }
+
+      .signup-link:hover{
+        text-decoration:underline;
+      }
+      /*Media*/
+      @media (max-width : 480px){
+        .nav{
+          padding: 15px 20px;
+          gap: 15px;
+          font-size: 0.9rem;
+        }
+      
+      .auth-card{
+        padding:30px 20px;
+      }
+      .auth-card h2{
+        font-size: 1.5rem;
+      }
+    }
+
+    /*sign-up page*/
+     body{
           font-family: Arial, sans-serif;
           background:#0a0a0a;
           color:white;
