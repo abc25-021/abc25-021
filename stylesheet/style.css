@@ -1,4 +1,4 @@
-/* This applies to all .html pages*/
+ /* This applies to all .html pages*/
 *{
         margin:0;
         padding:0;
@@ -158,6 +158,53 @@
         height:0.3px;
       }
        /* About Us.html additional css*/ 
+       *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      html,body{
+        height:100%;
+      }
+        body{
+          font-family: Arial, sans-serif;
+          background:#0a0a0a;
+          color:white;
+          min-height: 100vh;
+          display:flex;
+          flex-direction:column;
+        }
+        /*header doesn't cover content*/
+        header{
+          position:fixed;
+          top:0;
+          left:0;
+          width:100%;
+          z-index:1000;
+          background:#111;
+        }
+          .nav{
+            display:flex;
+            justify-content: space-between;
+           align-items: center;
+           padding: 20px 40px;
+            gap: 20px ;
+          }
+          .nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:25px;
+          }
+          .nav a:hover{
+            color:#ccc;
+          }
+          main{
+            flex:1;
+            padding-top:0; /*remove default top padding*/ 
+            padding: 80px 20px 40px 20px; /*top padding accounts for fixed header*/
+            max-width: 900px;
+            margin: 0 auto;
+          }
        /* Full-screen video background*/
         .hero-video{
             position:relative;
@@ -223,6 +270,69 @@
             main{
                 flex:1;
             }
+            /*Footer stays at the bottom*/
+            footer{
+                background:#111;
+                color:#999;
+                text-align:center;
+                padding:20px ;
+            }
+            footer a{
+              display:inline-block;
+              margin:10px 15px;
+              pointer-events: auto;
+            }
+             footer img{
+              width: 30px;
+              height: 30px;
+             vertical-align: middle;
+             }
+             /*menu-toggle*/
+              .menu-toggle{
+                display: none;
+                background: none;
+                border: none;
+                color:white;
+                font-size: 28px;
+                cursor:pointer;
+              }
+              .nav-links a{
+                display:flex;
+              }
+            /*Mobile and tablet styles*/
+            @media (max-width: 768px){
+              .nav{
+                padding: 15px 20px;
+                gap: 15px;
+                font-size: 0.9rem;
+              }
+            }
+            .menu-toggle{
+              display: block;
+              background: none;
+              border: 2px solid white;
+            }
+              .nav-links{
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                  width: 100%;
+                background: #111;
+                padding: 20px 0;
+                border-radius: 6px;
+              }
+              .nav-links.active{
+                display: flex;
+              }
+              .nav-links a{
+                margin:10px 0;
+                text-align: center;
+              }
+              main{
+                flex:1;
+              }
     /* css for images on Services.html page*/
       services{
         padding: 20px;
@@ -506,4 +616,5 @@
         font-size: 1.5rem;
       }
     }
-        
+
+
