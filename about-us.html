@@ -4,26 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Chrome Hearts</title>
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="stylesheet/style.css">
 </head>
 <body>
   <header>
     <nav class="nav">
       <div class="logo">CHROME HEARTS</div>
-      <button class="hamburger" id="hamburger">☰</button>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html">Homepage</a>
-        <a href="About-Us.html">About Us</a>
-        <a href="Products.html">Products</a>
-        <a href="Services.html">Services</a>
+      
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Homepage</a>
+          <a href="About-Us.html">About Us</a>
+          <a href="Products.html">Products</a>
+          <a href="Services.html">Services</a>
+        </div>
+        
+        <div class="cart-icon" onclick="toggleCart()">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </div>
+        
+        <button class="hamburger" id="hamburger">☰</button>
       </div>
     </nav>
   </header>
  
-  <div class="cart-icon" onclick="toggleCart()">
-    🛒 Cart <span class="cart-count" id="cartCount">0</span>
-  </div>
   <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
   
   <div class="cart-sidebar" id="cartSidebar">
@@ -44,12 +48,10 @@
   </div>
  
   <main>
+    <!-- Background video section -->
     <section class="hero-section">
-      <!-- Video background -->
       <video class="hero-video" autoplay muted loop playsinline poster="about-bg.jpg">
-        <source src="vid5.mp4" type="video/mp4">
-        <!-- Fallback image if video doesn't load -->
-        Your browser does not support the video tag.
+        <source src="vid10.mp4" type="video/mp4">
       </video>
  
       <div class="hero-overlay"></div>
@@ -68,6 +70,18 @@
  
   <footer>
     <p>&copy; 2026 Chrome Hearts. All rights reserved.</p>
+    
+    <section id="social-media" class="social-links">
+      <a href="https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start" target="_blank">
+        <img src="logo2.jpg" alt="Chrome Hearts Website">
+      </a>
+      <a href="https://www.instagram.com/chromeheartsofficial/" target="_blank">
+        <img src="image9.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/chromeheartsusa" target="_blank">
+        <img src="image8.jpg" alt="X">
+      </a>
+    </section>
   </footer>
  
   <script>
@@ -124,7 +138,6 @@
     function toggleCart() {
       document.getElementById('cartSidebar').classList.toggle('active');
       document.getElementById('cartOverlay').classList.toggle('active');
-      document.body.classList.toggle('modal-open');
     }
     function checkout() {
       if (cart.length === 0) { alert('Your cart is empty'); return; }
@@ -135,4 +148,4 @@
   </script>
 </body>
 </html>
- 
+
