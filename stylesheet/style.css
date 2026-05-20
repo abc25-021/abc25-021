@@ -1,4 +1,4 @@
- /* This applies to all .html pages*/
+/* This applies to all .html pages*/
 *{
         margin:0;
         padding:0;
@@ -615,6 +615,217 @@
       .auth-card h2{
         font-size: 1.5rem;
       }
+
+      /*Accessories.html,Scents.html,Undergarmet.html,Clothing.html*/
+    }
+    /*Prevent body scroll*/
+    body.model-open{
+      overflow:hidden
     }
 
+  /*header-fixed but does not cover*/
+  header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#111;
+    z-index:1000;
+  }
+  .nav-links{
+    display:flex;
+  }
+  /*Hamburger menu*/
+ .hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+ }
+
+ /* Main content - add padding-top to offset fixed header */
+ main {
+  flex: 1;
+  padding: 80px 20px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+ }
+
+ main h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+ }
+
+ /* Product Grid */
+ .product-grid {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(250px, 1fr));
+  gap: 30px;
+ }
+
+ /* Product Card */
+ .product-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+ }
+
+ .product-card:hover{
+  transform: translateY(-5px);
+  background:#222;
+ }
+ .product img{
+  width:100%;
+  height:250px;
+  object-fit: cover;
+  border-radius:5px
+ }
+ .product-card h3{
+  margin:15px 0 10px;
+  font-size:1.1rem;
+  font-weight:normal
+ }
+ .price{
+ font-size:1.3rem;
+ font-weight:bold;
+ color:#e0e0e0;
+ margin-bottom: 15px;
+ }
+
+ /*Buy button*/
+ .buy-btn{
+  background:#fff;
+  color:#000;
+  border:none;
+  padding:12px 25px;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
+  width:100%;
+ }
+ .buy-btn:hover{
+  background:#ccc;
+ }
+ /*Modal*/
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:2000;
+  justify-content:center;
+  align-items:center;
+}
+.modal.active{
+  display:flex;
+}
+.modal-content{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:8px;
+  max-width:500px;
+  width:90%;
+  position:relative;
+  max-height:90vh;
+  overflow-y:auto;
+}
+.modal-close{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:30px;
+  color:#fff;
+  cursor:pointer;
+  border:none;
+  background:none;
+}
+.modal-close:hover{
+  color:#ccc;
+}
+.modal-content img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:5px;
+  margin-bottom:20px;
+}
+.modal-content h2{
+ margin-bottom:10px;
+ font-size:1.5rem;
+}
+.modal-content .price{
+ font-size:1.5rem;
+ color:#fff;
+ margin-bottom:15px;
+}
+.modal-content p{
+  color:#ccc;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+.modal-buy-btn{
+ background:#fff;
+ color:#000;
+ border:none;
+ padding:15px;
+ width:100%;
+ font-weight:bold;
+ cursor:pointer;
+ border-radius:4px;
+ font-size:1rem;
+}
+.modal-buy-btn:hover{
+ background:#ccc;
+}
+/*Mobile and tablet*/
+ @media (max-width:768px){
+.nav {
+  padding:15px 20px;
+}
+.hamburger{
+ display:block;
+}
+.nav-links{
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ width:100%;
+ background:#111;
+ flex-direction:column;
+ padding:20px 0;
+}
+.nav-links{
+  display:flex;
+}
+.nav-links a{
+  margin:10px 0;
+ text-align:center;
+}
+main{
+ padding:70px;
+}
+main h1{
+ font-size:2rem;
+}
+.product-grid{
+ grid-template-columns:1fr;
+}
+.modal-content{
+ padding:20px;
+}
+.modal-content img{
+  height:220px;
+}
+ }
+ 
 
