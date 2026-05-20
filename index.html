@@ -1,72 +1,178 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!--nav and title here-->
-    <title>Chrome Hearts</title>
-    <meta charset = "utf-8">
-    <link rel="stylesheet" type="text/css" href = "stylesheet/style.css">
-  </head>
-  <body>
-    <div id = "divmaincontainer">
-      <header id = "siteheader">
-        <h1 id = "sitetitle"><img src = "logo2.jpg" alt = "Chrome Hearts" class = "logo">Chrome Hearts</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Hearts - Home</title>
+  <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">CHROME HEARTS</div>
       
-      <nav id = "sitenav">
-        <ul id = "ulnav">
-          <li><a href = "index.html">Homepage</a></li>
-           <li><a href = "about-us.html">About Us</a></li>
-           <li><a href = "Products.html">Products</a></li>
-           <li><a href = "Services.html">Services</a></li>
-           <li><a href = "signin.html">Sign In</a></li>
-        </ul>
-       </nav>
-    </header>
-    </div>
-            <main>
-                <section>
-                  <!--video + overlay here-->
-                    <div class = "hero-video">
-                        <video src = "vid5.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <div class = "info-overlay">
-                        <h2> Richard Stark</h2>
-                </div>
-                </section>
-              </main>
-      <main>
-              <section class = "showcase">
-                <div class = "side-images left">
-                  <img src = "image1.jpg" alt ="">
-                  <img src = "image2.jpg" alt = "">
-                </div>
-                  <div class = "info-center">
-            <p> The brand started in Los Angeles proudly. Richard Stark built it wuth a bold vision.
-            It began with leather and silver good.Stark wanted more than basic fashion.
-            His ideas were raw and edgy. The brand reflected biker-inspired fashion</p>
-                  </div>
-                <div class = "side-images right">
-                  <img src ="image3.jpg" alt="">
-                  <img src = "image4.jpg" alt="">
-                </div>
-              </section>
-      </main>
-    <script>
-        window.addEventListener('load',()=>{
-            const videos = document.querySelectorAll('.hero-video video');
-            videos.forEach(video => {
-                video.play();
-            });
-        });
-        </script>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Homepage</a>
+          <a href="About-Us.html">About Us</a>
+          <a href="Products.html">Products</a>
+          <a href="Services.html">Services</a>
+        </div>
+        
+        <div class="cart-icon" onclick="toggleCart()">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </div>
+        
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </nav>
+  </header>
+ 
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
   
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+ 
+  <main>
+    <!-- Single Background Video Hero -->
+    <section class="hero-section">
+      <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
+        <source src="vid5.mp4" type="video/mp4">
+      </video>
+ 
+      <div class="hero-overlay"></div>
+      
+      <div class="hero-content">
+        <h1>Richard ...</h1>
+      </div>
+    </section>
+ 
+    <!-- Content Section 1 -->
+    <section class="content-section">
+      <div class="content-image">
+        <img src="image1.jpg" alt="Chrome Hearts">
+      </div>
+      <div class="content-text">
+        <h2>CRAFTSMANSHIP</h2>
+        <p>Every piece is handcrafted in Los Angeles with meticulous attention to detail. Sterling silver, 22k gold, and premium leather come together to create wearable art that lasts generations.</p>
+      </div>
+    </section>
+ 
+    <!-- Content Section 2 -->
+    <section class="content-section">
+      <div class="content-image">
+        <img src="image2.jpg" alt="Chrome Hearts">
+      </div>
+      <div class="content-text">
+        <h2>LEGACY</h2>
+        <p>Since 1988, Chrome Hearts has defined luxury streetwear. Worn by musicians, artists, and collectors worldwide, our pieces are more than accessories—they're statements.</p>
+      </div>
+    </section>
+ 
+    <!-- Content Section 3 -->
+    <section class="content-section">
+      <div class="content-image">
+        <img src="image3.jpg" alt="Chrome Hearts">
+      </div>
+      <div class="content-text">
+        <h2>EXCLUSIVITY</h2>
+        <p>Limited runs and one-of-one pieces ensure that what you wear is truly yours. No mass production, no compromises. Just raw, unfiltered design.</p>
+      </div>
+    </section>
+  </main>
+ 
   <footer>
-    <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-     <section id = "social media">
-                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "logo2.jpg"></a>
-                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
-                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
+    <p>&copy; 2026 Chrome Hearts. All rights reserved.</p>
+    
+    <section id="social-media" class="social-links">
+      <a href="https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start" target="_blank">
+        <img src="logo2.jpg" alt="Chrome Hearts Website">
+      </a>
+      <a href="https://www.instagram.com/chromeheartsofficial/" target="_blank">
+        <img src="image9.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/chromeheartsusa" target="_blank">
+        <img src="image8.jpg" alt="X">
+      </a>
     </section>
   </footer>
-  </div>
-  </body>
+ 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+ 
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    function saveCart() { localStorage.setItem('cart', JSON.stringify(cart)); updateCartUI(); }
+    function removeFromCart(id) { cart = cart.filter(item => item.id !== id); saveCart(); }
+    function updateQty(id, change) {
+      const item = cart.find(item => item.id === id);
+      if (item) {
+        item.qty += change;
+        if (item.qty <= 0) { removeFromCart(id); } else { saveCart(); }
+      }
+    }
+    function getTotal() {
+      return cart.reduce((total, item) => {
+        const priceNum = parseFloat(item.price.replace('$', '').replace(',', ''));
+        return total + (priceNum * item.qty);
+      }, 0);
+    }
+    function updateCartUI() {
+      const cartItems = document.getElementById('cartItems');
+      const cartCount = document.getElementById('cartCount');
+      const cartTotal = document.getElementById('cartTotal');
+      if (!cartItems) return;
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+        cartCount.textContent = totalItems;
+        if (cart.length === 0) {
+          cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+        } else {
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}">
+                <div>
+                    <h4>${item.name}</h4>
+                    <p class="price">${item.price}</p>
+                    <div class = "cart-item-controls">
+                    <div>
+                    <button class="qty-btn" onclick="updateQty(${item.id}, -1)">-</button>
+                    <span>${item.qty}</span>
+                    <button class="qty-btn" onclick="updateQty(${item.id}, 1)">+</button>
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
+                    </div>
+                </div>
+                </div>
+            `).join('');
+        }
+        cartTotal.textContent = `$${getTotal().toLocaleString()}`;
+    }
+    function toggleCart(){
+        document.getElementById('cartSidebar').classList.toggle('active');
+        document.getElementById('cartOverlay').classList.toggle('active');
+    }
+    function checkout() {
+      if (cart.length === 0) {alert('Your cart is empty!');return;}
+      alert('Checkout functionality would go here.Total: $' + getTotal().toLocaleString());
+      cart = []; saveCart(); toggleCart();
+    }
+    updateCartUI();
+  </script>
+</body>
 </html>
