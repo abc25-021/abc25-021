@@ -1,88 +1,68 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset = "utf-8">
-    <title>Sign In- Chrome hearts</title>
-    <link rel = "stylesheet" type = "tex/css" href = "stylesheet/style.css">
-  </head>
-     <body> 
-    <div id = "divmaincontainer">
-      <header id = "siteheader">
-        <h1 id = "sitetitle"><img src = "logo2.jpg" alt = "Chrome Hearts" class = "logo">Chrome Hearts</h1>
-         <nav class = "nav">
-            <a href = "index.html">Home</a>
-           <a href = "about-us.html">About Us</a>
-           <a href = "Products.html">Products</a>
-           <a href = "Services.html">Services</a>
-           <a href = "signin.html">Sign In</a>
-      </nav>
-      </header>
-      <main class = "auth-page">
-        <div class = "auth-card">
-          <h2>Sign In</h2>
-          <form id = "signin-form">
-            <label for = "email"> Email </label>
-            <input type = "email" id = "email" required>
-          <br>
-            <label for ="password"> Password </label>
-            <div class = "password-wrap">
-              <input type = "password" id = "password" required minlenght ="6">
-              <button type = "button" id = "togglePass"> Show </button>
-            </div>
-            <br>
-            <button type = "Submit"> Sign In </button>
-          </form>
-          <p id = "login-message"></p>
-          <br>
-          <p class = "signup-link"> Don't have an account? <a href = "signup.html"> Sign Up</a></p>
-      </main>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Chrome Hearts</title>
+ <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">CHROME HEARTS</div>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Homepage</a>
+          <a href="About-Us.html">About Us</a>
+          <a href="Products.html">Products</a>
+          <a href="Services.html">Services</a>
+          <a href="SignUp.html">Sign Up</a>
+        </div>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </nav>
+  </header>
+ 
+  <main class="form-wrapper">
+    <div class="form-container">
+      <h2>SIGN IN</h2>
+      <form onsubmit="alert('Sign in functionality would go here'); return false;">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+      <div class="form-footer">
+        Don't have an account? <a href="SignUp.html">Sign Up</a>
+      </div>
     </div>
-     
-     <footer>
-      <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-     <section id = "social media">
-                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "logo2.jpg"></a>
-                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
-                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Chrome Hearts. All rights reserved.</p>
+    <section class="social-links">
+      <a href="https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start" target="_blank">
+        <img src="logo2.jpg" alt="Chrome Hearts Website">
+      </a>
+      <a href="https://www.instagram.com/chromeheartsofficial/" target="_blank">
+        <img src="image9.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/chromeheartsusa" target="_blank">
+        <img src="image8.jpg" alt="X">
+      </a>
     </section>
-    </footer>
-    <script src = "signin.js"></script>
-     <script>
-        const form = document.getElementById('signin-form');
-        const togglePass = document.getElementById('togglePass');
-        const passwordInput = document.getElementById('password');
-        const message = document.getElementById('login-message');
-
-        //Show/hide password//
-        togglePass.addEventListener('click', () =>{
-          const isPassword = passwordInput.type === 'password';
-          passwordInput.type = isPassword ? 'text' : 'password' ;
-          tooglePass.textContent = isPassword ? 'Hide' : 'Show' ;
-        });
-
-        //Handle form submit//
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const email = document.getElementById('email').value;
-          const password = passwordInput.value;
-          
-          // This is where you'd call your backend or Firebase/Auth API
-          console.log('Login attempt:',{email, password, remember});
-
-          // Demo: show message
-          message.style.color = '#4f4';
-          message.textContent = 'Login successful Redirecting...';
-
-          // Reset after 2s
-          setTimeout(() => {
-            message.textContent = '';
-            form.reset();
-          }, 2000);
-        });  
-        
-
-
-     </script>
+  </footer>
+ 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
 </body>
 </html>
   
