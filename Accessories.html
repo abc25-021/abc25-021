@@ -1,170 +1,217 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device,initial-scale = 1.0">
-        <title> Accessories - Chrome Hearts </title>
-        <link rel = "stylesheet" href ="style.css">
-    </head>
-    <body>
-        <header>
-            <nave class = "nav">
-                <div class = "logo"> Chrome Hearts</div>
-                <button class = "hamburger" id = "hamburger">///</button>
-                <div class ="nav-links" id = "nav-links">
-                    <a href = "index.html"> Homepage</a>
-                     <a href = "about-us.html"> About Us</a>
-                      <a href = "Products.html"> Products</a>
-                       <a href = "Services.html"> Services</a>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <h1> Accessories</h1>
-            <div class = "product-grid">
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
-                <div class = "product-card">
-                    <img src = "image45.jpg" alt = "Product 1">
-                    <h3> </h3>
-                    <p class= "price"> $</p>
-                    <button class = "Buy-btn" onclick="alert('Redirecting to checkout')">Buy Now </button>
-                </div>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories - Chrome Hearts</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">CHROME HEARTS</div>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Homepage</a>
+          <a href="about-us.html">About Us</a>
+          <a href="Products.html" class="active">Products</a>
+          <a href="Services.html">Services</a>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></div>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </nav>
+  </header>
+ 
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is empty</p></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total:</span><span id="cartTotal">$0</span></div>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+ 
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <h1>ACCESSORIES</h1>
+      <p>Unique pieces that complement your look. Made in LA.</p>
+    </section>
+ 
+    <!-- Product Grid -->
+    <section class="product-grid">
+      
+      <div class="product-card">
+        <img src="image51.jpg" alt="Bracelet">
+        <div class="product-info">
+          <h3>CH Plus Bracelet With Links</h3>
+          <p>Designed for everyday wear.</p>
+          <div class="product-price">$269</div>
+          <button class="add-to-cart" onclick="addToCart('accessory1', 'CH Plus Bracelet With Links', '$269', 'image51.jpg')">Add to Cart</button>
+        </div>
+      </div>
+ 
+      <div class="product-card">
+        <img src="image53.jpg" alt="Hoodie">
+        <div class="product-info">
+          <h3>CH Onyx Bead Bracelet 8MM (8 Silver Beads)</h3>
+          <p>can be styled on its own or stacked with other Chrome Hearts bracelets.</p>
+          <div class="product-price">$269</div>
+          <button class="add-to-cart" onclick="addToCart('accessory2', 'CH Onyx Bead Bracelet 8MM (8 Silver Beads)', '$269', 'image53.jpg')">Add to Cart</button>
+        </div>
+      </div>
+ 
+      <div class="product-card">
+        <img src="image54.jpg" alt="NBracelet">
+        <div class="product-info">
+          <h3>TINY E CH PLUS BRACELET</h3>
+          <p>Designed to blend in.</p>
+          <div class="product-price">$235</div>
+          <button class="add-to-cart" onclick="addToCart('accessory3', 'TINY E CH PLUS BRACELET', '$235', 'image54.jpg')">Add to Cart</button>
+        </div>
+      </div>
+ 
+      <div class="product-card">
+        <img src="image55.jpg" alt="Glasses">
+        <div class="product-info">
+          <h3>Chrome Heart Glasses Black​</h3>
+          <p>Premium leather protective case.</p>
+          <div class="product-price">$300</div>
+          <button class="add-to-cart" onclick="addToCart('accessory4', 'Chrome Heart Glasses Black​', '$300', 'image55.jpg')">Add to Cart</button>
+        </div>
+      </div>
+ 
+      <div class="product-card">
+        <img src="image56.jpg" alt="Glasses">
+        <div class="product-info">
+          <h3>Chrome Hearts Transparent Golden Glasses</h3>
+          <p>Original Chrome Hearts case.</p>
+          <div class="product-price">$290</div>
+          <button class="add-to-cart" onclick="addToCart('accessory5', 'Chrome Hearts Transparent Golden Glasses', '$290', 'image56.jpg')">Add to Cart</button>
+        </div>
+      </div>
+ 
+      <div class="product-card">
+        <img src="image59.jpg" alt="Glasses">
+        <div class="product-info">
+          <h3>Chrome Hearts Vagillionaire II Glasses</h3>
+          <p>Brand booklet.</p>
+          <div class="product-price">$300</div>
+          <button class="add-to-cart" onclick="addToCart('accessory6', 'Chrome Hearts Vagillionaire II Glasses', '$300', 'image59.jpg')">Add to Cart</button>
+        </div>
+      </div>
+ 
+    </section>
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Chrome Hearts. All rights reserved.</p>
+    <section class="social-links">
+      <a href="https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start" target="_blank">
+        <img src="logo2.jpg" alt="Chrome Hearts Website">
+      </a>
+      <a href="https://www.instagram.com/chromeheartsofficial/" target="_blank">
+        <img src="image9.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/chromeheartsusa" target="_blank">
+        <img src="image8.jpg" alt="X">
+      </a>
+    </section>
+  </footer>
+ 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+ 
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartUI();
+    }
+    
+    function addToCart(id, name, price, image) {
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id, name, price, image, qty: 1 });
+      }
+      saveCart();
+      toggleCart();
+    }
+    
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+    }
+    
+    function updateQty(id, change) {
+      const item = cart.find(item => item.id === id);
+      if (item) {
+        item.qty += change;
+        if (item.qty <= 0) {
+          removeFromCart(id);
+        } else {
+          saveCart();
+        }
+      }
+    }
+    
+    function getTotal() {
+      return cart.reduce((total, item) => total + (parseFloat(item.price.replace('$', '').replace(',', '')) * item.qty), 0);
+    }
+    
+    function updateCartUI() {
+      const cartItems = document.getElementById('cartItems');
+      const cartCount = document.getElementById('cartCount');
+      const cartTotal = document.getElementById('cartTotal');
+      if (!cartItems) return;
+      
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCount.textContent = totalItems;
+      
+      cartItems.innerHTML = cart.length === 0
+        ? '<p class="empty-cart">Your cart is empty</p>'
+        : cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div>
+            <h4>${item.name}</h4>
+            <p>${item.price}</p>
+            <div>
+              <button class="qty-btn" onclick="updateQty('${item.id}', -1)">-</button>
+              <span>${item.qty}</span>
+              <button class="qty-btn" onclick="updateQty('${item.id}', 1)">+</button>
+              <button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button>
             </div>
-        </main>
+          </div>
+        </div>`).join('');
+      cartTotal.textContent = '$' + getTotal().toLocaleString();
+    }
+    
+    function toggleCart() {
+      document.getElementById('cartSidebar').classList.toggle('active');
+      document.getElementById('cartOverlay').classList.toggle('active');
+    }
 
-        <footer>
-               <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-     <section id = "social media">
-                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "logo2.jpg"></a>
-                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
-                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
-        </section>  
-            </footer>
-            <!--Pruduct Model-->
-            <div class = "modal" id = "productModal">
-                <div class = "modal-content">
-                    <button class = "modal-close" id=modalClose>&times;</button>
-                    <img id = "modalImage" src="" alt="">
-                    <h2 id="modalTitle"></h2>
-                    <p class="price" id = "modalPrice"></p>
-                    <p id ="modalDesc"></p>
-                    <button class = "modal-buy-btn" onclick = "alert('Checkout coming soon')">
-                </div>
-            </div>
-            
-            <script>
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
-                hamburger,addEventListener('click',() => {
-                    navLinks.classList.toggle('active');
-                });
-
-                //Modal functionality//
-                const modal = document.getElementById('productModal');
-                const modalClose =  document.getElementById('modalClose');
-
-                function openModal(title, image, price, desc) {
-                document.getElementById('modalTitle').textContent= title;
-                document.getElementById('modalImage').src = image;
-                document.getElementById('modalImage').alt = title;
-                document.getElementById('modalPrice').textContent = price;
-                document.getElementById('modalDesc').textContent = desc;
-
-                modal.classlist.add('active');
-                document.bodyclassList.add('modal-open');
-                }
-                
-                function closeModal() {
-                    modal.classList.remove('active');
-                    document.body.classList.remove('modal-open');
-                }
-
-                modalClose.addEventListener('click', closeModal);
-
-                //close modal when clicking outside content
-                modal.addEventListener('click', (e) => {
-                 if (e.target === modal) {
-                     closeModal();
-                 }
-            
-           });
-
-        // Close modal with ESC key//
-         document. addEventListener('keydown', (e) => { 
-            if (e,key === 'Escape' && modal.classList.contains('active' )) { 
-                closeModal();
-                
-            }
-        });
-
-      </script>
-
-    </body>
-<html>
-
-
+    function checkout() {
+      if (cart.length === 0) {
+        alert('Your cart is empty');
+        return;
+      }
+      alert('Checkout functionality would go here. Total: $' + getTotal().toLocaleString());
+      cart = [];
+      saveCart();
+      toggleCart();
+    }
+    updateCartUI();
+  </script>
+</body>
+</html>
