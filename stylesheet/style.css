@@ -963,7 +963,7 @@
  
     /* Footer */
     footer {
-      background: #000; text-align: center; padding: 15px 20px; color: #fff;
+      background: #000; text-align: center; padding: 20px; color: #fff;
     }
     footer p { margin-bottom: 20px; color: #aaa; font-size: 0.9rem; }
     .social-links { display: flex; justify-content: center; align-items: center; gap: 30px; }
