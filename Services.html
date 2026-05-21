@@ -1,62 +1,129 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Services</title>
-    <meta charset = "utf-8">
-      <link rel="stylesheet" type="text/css" href = "stylesheet/style.css">
-  </head>
-  <body>
-    <header id = "siteheader">
-      <h1 id = "sitetitle"><img src = "logo2.jpg" alt = "Chrome Hearts Logo" class = "logo">CHROME HEARTS</h1>
-      <nav id = "sitenav">
-        <ul id = "ulnav">
-           <li><a href = "index.html">Home</a></li>
-           <li><a href = "about-us.html">About Us</a></li>
-           <li><a href = "Products.html">Products</a></li>
-           <li><a href = "Services.html">Services</a></li>
-           <li><a href = "signin.html">Sign In</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id = "maincontent">
-      <h1>Our Services</h1>
-      <p>At Chrome Hearts, we offer a range of services to cater to your needs. Whether you're looking for custom jewelry design, repairs, or personalized consultations, our team of experts is here to assist you. 
-        We pride ourselves on delivering exceptional craftsmanship and unparalleled customer service. Explore our services to discover how we can help you create the perfect piece that reflects your unique style.</p>
-        <br>
-        <img src = "services.jpg" alt = "Our Services" style = "width:80%; display:block; margin: 0 auto; border-radius:10px;">
-        <br>
-      <p> 
-        There are several services that we offer to our customers. We provide custom jewelry design, where you can work with our skilled artisans to create a one-of-a-kind piece that reflects your personal style and vision.
-         Our repair services ensure that your cherished jewelry is restored to its original beauty, whether it's a simple fix or a complex restoration.
-         Additionally, we offer personalized consultations to help you choose the perfect piece from our collection or to guide you through the design process for custom creations. 
-         At Chrome Hearts, we are committed to providing exceptional craftsmanship and outstanding customer service to meet all your jewelry needs.</p>
-         <br>
-         <img src = "services2.jpg" alt = "Our Services" style = "width:80%; display:block; margin: 0 auto; border-radius:10px;">
-         <br>
-         <p>Our custom jewelry design service allows you to collaborate with our skilled artisans to create a unique piece that reflects your personal style and vision. Whether you have a specific design in mind or need guidance in bringing your ideas to life, our team is here to assist you every step of the way. 
-          We use high-quality materials and expert craftsmanship to ensure that your custom piece is not only beautiful but also durable and timeless.</p>
-          <br>
-          <img src = "services3.jpg" alt = "Our Services" style = "width:80%; display:block; margin: 0 auto; border-radius:10px;">
-          <br>
-          <p>Our repair services are designed to restore your cherished jewelry to its original beauty. Whether it's a simple fix like resizing or a more complex restoration, our skilled jewelers have the expertise to handle it with care and precision. 
-            We understand the sentimental value of your jewelry, and we strive to provide repairs that maintain the integrity and beauty of each piece.</p>
-            <br>
-            <img src = "services4.jpg" alt = "Our Services" style = "width:80%; display:block; margin: 0 auto; border-radius:10px;">
-            <br>
-            <p>In addition to our design and repair services, we offer personalized consultations to help you choose the perfect piece from our collection or to guide you through the design process for custom creations. 
-              Our knowledgeable staff is dedicated to providing exceptional customer service, ensuring that you have a memorable and enjoyable experience at Chrome Hearts.</p>
-              <br>
-              <img src = "services5.jpg" alt = "Our Services" style = "width:80%; display:block; margin: 0 auto; border-radius:10px;">
-              <br>
-    </main>
-    <footer>
-       <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-     <section id = "social media">
-                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "logo2.jpg"></a>
-                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
-                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Chrome Hearts</title>
+  <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">CHROME HEARTS</div>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Homepage</a>
+          <a href="About-Us.html">About Us</a>
+          <a href="Products.html">Products</a>
+          <a href="Services.html">Services</a>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></div>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </nav>
+  </header>
+ 
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is empty</p></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total:</span><span id="cartTotal">$0</span></div>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+ 
+  <main>
+    <section class="page-header">
+      <h1>OUR SERVICES</h1>
+      <p>Bespoke craftsmanship and repair for your Chrome Hearts pieces</p>
     </section>
-    </footer>
-
-  </body>
+ 
+    <section class="services-grid">
+      <div class="service-card">
+        <img src="services1.jpg" alt="Custom Design">
+        <h3>CUSTOM DESIGN</h3>
+        <p>Work directly with our craftsmen to create one-of-one pieces. From concept to completion, every detail is handcrafted to your specifications.</p>
+      </div>
+      <div class="service-card">
+        <img src="services2.jpg" alt="Repair & Restoration">
+        <h3>REPAIR & RESTORATION</h3>
+        <p>Keep your pieces lasting generations. Our team restores silver, gold, leather, and stone work to original condition using traditional methods.</p>
+      </div>
+      <div class="service-card">
+        <img src="services3.jpg" alt="Consultation">
+        <h3>PERSONAL CONSULTATION</h3>
+        <p>Book a private consultation to explore our collection and find pieces that match your style. Available in-store and online.</p>
+      </div>
+    </section>
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Chrome Hearts. All rights reserved.</p>
+    <section id="social-media" class="social-links">
+      <a href="https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start" target="_blank">
+        <img src="logo2.jpg" alt="Chrome Hearts Website">
+      </a>
+      <a href="https://www.instagram.com/chromeheartsofficial/" target="_blank">
+        <img src="image9.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/chromeheartsusa" target="_blank">
+        <img src="image8.jpg" alt="X">
+      </a>
+    </section>
+  </footer>
+ 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+ 
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    function saveCart() { localStorage.setItem('cart', JSON.stringify(cart)); updateCartUI(); }
+    function removeFromCart(id) { cart = cart.filter(item => item.id !== id); saveCart(); }
+    function updateQty(id, change) {
+      const item = cart.find(item => item.id === id);
+      if (item) { item.qty += change; if (item.qty <= 0) { removeFromCart(id); } else { saveCart(); } }
+    }
+    function getTotal() {
+      return cart.reduce((total, item) => total + (parseFloat(item.price.replace('$', '').replace(',', '')) * item.qty), 0);
+    }
+    function updateCartUI() {
+      const cartItems = document.getElementById('cartItems');
+      const cartCount = document.getElementById('cartCount');
+      const cartTotal = document.getElementById('cartTotal');
+      if (!cartItems) return;
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCount.textContent = totalItems;
+      cartItems.innerHTML = cart.length === 0 ? '<p class="empty-cart">Your cart is empty</p>' : cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div>
+            <h4>${item.name}</h4>
+            <p>${item.price}</p>
+            <div>
+              <button class="qty-btn" onclick="updateQty('${item.id}', -1)">-</button>
+              <span>${item.qty}</span>
+              <button class="qty-btn" onclick="updateQty('${item.id}', 1)">+</button>
+              <button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button>
+            </div>
+          </div>
+        </div>`).join('');
+      cartTotal.textContent = '$' + getTotal().toLocaleString();
+    }
+    function toggleCart() {
+      document.getElementById('cartSidebar').classList.toggle('active');
+      document.getElementById('cartOverlay').classList.toggle('active');
+    }
+    function checkout() {
+      if (cart.length === 0) { alert('Your cart is empty'); return; }
+      alert('Checkout functionality would go here. Total: $' + getTotal().toLocaleString());
+      cart = []; saveCart(); toggleCart();
+    }
+    updateCartUI();
+  </script>
+</body>
 </html>
