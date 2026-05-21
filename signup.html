@@ -1,114 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-     <link rel = "stylesheet" type = "tex/css" href = "stylesheet/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Chrome Hearts</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
 </head>
 <body>
-    <header>
-       <div id = "divmaincontainer">
-      <header id = "siteheader">
-        <h1 id = "sitetitle"><img src = "logo2.jpg" alt = "Chrome Hearts" class = "logo">Chrome Hearts</h1>
-      </div>
-              <nav class = "nav">
-            <a href = "index.html">Home</a>
-           <a href = "about-us.html">About Us</a>
-           <a href = "Products.html">Products</a>
-           <a href = "Services.html">Services</a>
-           <a href = "signin.html">Sign In</a>
-              </nav>
-    </header>
-    <main class = "auth-page">
-        <div class = "auth-card">
-            <h2>Create Account</h2>
-            <form id = "signup-form">
-                <label for = "name"> Full Name </label>
-                <input type = "text" id = "name" required>
-                <br>
-                <label for = "email"> Email </label>
-                <input type = "email" id = "email" required>
-                <br>
-                <label for ="password"> Password </label>
-                <div class = "password-wrap">
-                    <input type = "password" id = "password" required minlenght ="6">
-                    <button type = "button" id = "togglePass"> Show </button>
-                </div>
-                <br>
-                    <label for ="confirm-password"> Confirm Password </label>
-                    <div class = "password-wrap">
-                        <input type = "password" id = "confirm-password" required minlenght ="6">
-                        <button type = "button" id = "toggleConfirmPass"> Show </button>
-                    </div>
-                <br>
-                <div class="form-options">
-                    <label><input type="checkbox" id="terms" required> I agree to the Terms & Privacy Policy</label>
-                
-                </div>
-                <button type = "Submit"> Sign Up </button>
-            </form>
-            <p id = "signup-message"></p>
-            <br>
-            <p class = "signin-link"> Already have an account? <a href = "signin.html"> Sign In</a></p>
+  <header>
+    <nav class="nav">
+      <div class="logo">CHROME HEARTS</div>
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Homepage</a>
+          <a href="About-Us.html">About Us</a>
+          <a href="Products.html">Products</a>
+          <a href="Services.html">Services</a>
+          <a href="SignIn.html">Sign In</a>
         </div>
-    </main>
-     <footer>
-      <p>&copy; 2024 Chrome Hearts. All rights reserved.</p>
-     <section id = "social media">
-                <a href = "https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start"><img src = "logo2.jpg"></a>
-                 <a href = "http://www.instagram.com/chromeheartsofficial/"><img src = "image9.jpg"></a>
-                 <a href = "https://x.com/chromeheartsusa"><img src = "image8.jpg"></a>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </nav>
+  </header>
+ 
+  <main class="form-wrapper">
+    <div class="form-container">
+      <h2>SIGN UP</h2>
+      <form onsubmit="alert('Sign up functionality would go here'); return false;">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" required>
+        </div>
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+      <div class="form-footer">
+        Already have an account? <a href="SignIn.html">Sign In</a>
+      </div>
+    </div>
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Chrome Hearts. All rights reserved.</p>
+    <section class="social-links">
+      <a href="https://www.chromehearts.com/on/demandware.store/Sites-ChromeHearts-Site/en_US/Default-Start" target="_blank">
+        <img src="logo2.jpg" alt="Chrome Hearts Website">
+      </a>
+      <a href="https://www.instagram.com/chromeheartsofficial/" target="_blank">
+        <img src="image9.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/chromeheartsusa" target="_blank">
+        <img src="image8.jpg" alt="X">
+      </a>
     </section>
-    <script src = "signup.js"></script>
-     <script>
-       const form = document.getElementByid('signup-form');
-       const togglePass = document.getElementById('togglePass');
-       const toggleConfirmPass = document.getElementById('toggleConfirmPass');
-         const passwordInput = document.getElementById('password');
-            const confirmInput = document.getElementById('confirm-password');
-            const message = document.getElementById('signup-message');
-
-            //Show/hide password toggles//
-            togglePass.addEventListener('click', () =>{
-              const isPassword = passwordInput.type === 'password';
-              passwordInput.type = isPassword ? 'text' : 'password' ;
-              togglePass.textContent = isPassword ? 'Hide' : 'Show' ;
-            });
-
-            toggleConfirmPass.addEventListener('click', () =>{
-              const isPassword = confirmInput.type === 'password';
-              confirmInput.type = isPassword ? 'text' : 'password' ;
-              toggleConfirmPass.textContent = isPassword ? 'Hide' : 'Show' ;
-            });
-
-            // Handle form submit
-            form.addEventListener('submit', (e) => {
-              e.preventDefault();
-
-              const name = document.getElementById('name').value;
-              const email = document.getElementById('email').value;
-              const password = passwordInput.value;
-              const confirmPassword = confirmInput.value;
-
-              // Basic validation
-              if (password !== confirmPassword) {
-                message.style.color = '#f44';
-                message.textContent = 'Passwords do not match.';
-                return;
-
-                } 
-
-                // This is where you'd call your backend or Firebase/Auth API to create the account
-                console.log('Signup attempt:', {name, email, password});
-                 message.style.color = '#4f4';
-                 message.textContent = 'Account created successfully! Redirecting...';
-
-                 setTimeout(() => {
-                  window.location.href = 'signin.html';
-                 }, 2000);
-                });
-        </script>
-    </footer>
+  </footer>
+ 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+  </script>
 </body>
 </html>
+
