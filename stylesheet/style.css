@@ -950,7 +950,7 @@
     .dropbtn:hover { background: #ccc; }
     .dropdown-content {
       display: none; position: absolute; background: #1a1a1a; min-width: 220px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.5); border-radius: 6px; z-index: 4;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.5); border-radius: 6px; z-index: 1000;
       top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0px;
     }
     .dropdown-content a {
@@ -963,7 +963,7 @@
  
     /* Footer */
     footer {
-      background: #000; text-align: center; padding: 40px 20px; color: #fff;
+      background: #000; text-align: center; padding: 15px 20px; color: #fff;
     }
     footer p { margin-bottom: 20px; color: #aaa; font-size: 0.9rem; }
     .social-links { display: flex; justify-content: center; align-items: center; gap: 30px; }
