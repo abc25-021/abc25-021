@@ -960,10 +960,13 @@
     .dropdown-content a:last-child { border-bottom: none; }
     .dropdown-content a:hover { background: #333; }
     .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content{
+     position:absolute;
+     z-index:9999;
  
     /* Footer */
     footer {
-      background: #000; text-align: center; padding: 20px; color: #fff; position: relative; z-index:-1;
+      background: #000; text-align: center; padding: 20px; color: #fff; position: relative; z-index:1;
     }
     footer p { margin-bottom: 20px; color: #aaa; font-size: 0.9rem; }
     .social-links { display: flex; justify-content: center; align-items: center; gap: 30px; }
