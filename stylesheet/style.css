@@ -1229,6 +1229,64 @@ nav{
       padding:20px !important;
       margin-top:0 !important;
      }
-
+/* NAV + DROPDOWN FIX - DO NOT DELETE */
+header, nav, .navbar {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+ 
+.dropdown {
+  position: relative !important;
+}
+ 
+.dropdown-content {
+  display: none;
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 10000 !important;
+}
+ 
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+ 
+footer {
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: 0 !important;
+  padding: 20px !important;
+}
+ 
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+}
+ 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block !important;
+    z-index: 10001 !important;
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999 !important;
+  }
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+ 
     
 
