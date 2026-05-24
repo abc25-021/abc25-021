@@ -1209,25 +1209,25 @@
     }
 /*final fix for hamburger*/     
 nav{
- position: relative;
- z-index:999;
+ position: relative !important;
+ z-index:999 !important;
 }
      .dropdown{
-      position:relaive;
+      position:relaive !important;
      }
 
      .dropdown-content{
-      position:absolute;
-      z-index:10000;
+      position:absolute !important;
+      z-index:10000 !impotant;
       background:#fff;
       box-shadow:0 4px 12px rgba(0,0,0,0.15);
      }
 
      footer{
       position:relative;
-      z-index:1;
-      padding:20px;
-      margin-top:0;
+      z-index:1 !important;
+      padding:20px !important;
+      margin-top:0 !important;
      }
 
     
