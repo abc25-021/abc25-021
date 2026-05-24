@@ -1207,7 +1207,28 @@
       .product-grid { padding: 0 20px; gap: 20px; }
       .cart-sidebar { width: 100%; right: -100%; }
     }
+/*final fix for hamburger*/     
+nav{
+ position: relative;
+ z-index:999;
+}
+     .dropdown{
+      position:relaive;
+     }
 
+     .dropdown-content{
+      position:absolute;
+      z-index:10000;
+      background:#fff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+     }
+
+     footer{
+      position:relative;
+      z-index:1;
+      padding:20px;
+      margin-top:0;
+     }
 
     
 
