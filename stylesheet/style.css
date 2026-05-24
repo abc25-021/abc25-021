@@ -1207,28 +1207,7 @@
       .product-grid { padding: 0 20px; gap: 20px; }
       .cart-sidebar { width: 100%; right: -100%; }
     }
-/*final fix for hamburger*/     
-nav{
- position: relative !important;
- z-index:999 !important;
-}
-     .dropdown{
-      position:relaive !important;
-     }
 
-     .dropdown-content{
-      position:absolute !important;
-      z-index:10000 !impotant;
-      background:#fff;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
-     }
-
-     footer{
-      position:relative;
-      z-index:1 !important;
-      padding:20px !important;
-      margin-top:0 !important;
-     }
 /* NAV + DROPDOWN FIX - DO NOT DELETE */
 header, nav, .navbar {
   position: relative !important;
@@ -1288,5 +1267,15 @@ footer {
   }
 }
  
-    
+/* HAMBURGER FIX ONLY */
+.hamburger {
+  display: block !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+ 
+nav, .navbar {
+  position: relative !important;
+  min-height: 50px !important;
+}    
 
